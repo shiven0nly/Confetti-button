@@ -6,75 +6,19 @@
     <title>Confetti</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Center the whole body content */
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #f0f0f0;
-      }
-
-      /* Wrapper around the button */
-      .button-wrapper {
-        position: relative;
-        z-index: 1;
-      }
-
-      /* The confetti canvas */
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-      }
-
-      /* Style for the button */
-      .confetti-button {
-        padding: 15px 30px;
-        font-size: 18px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-        transition: background 0.3s ease;
-      }
-
-      .confetti-button:hover {
-        background-color: #0056b3;
-      }
+      
     </style>
   </head>
   <body>
+    <div class="parent">
     <div class="button-wrapper">
-      <button type="submit" class="confetti-button">yay🍧</button>
+      <button type="submit" class="confetti-button">yay🥳</button>
     </div>
-
+   <div class="button-bg"></div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script>
-      document
-        .getElementsByClassName("confetti-button")[0]
-        .addEventListener("click", () => {
-          let canvas = document.createElement("canvas");
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-          let container = document.getElementsByClassName("button-wrapper")[0];
-          container.appendChild(canvas);
+    <script src="script.js"></script>
+    
 
-          let myConfetti = confetti.create(canvas, {
-            resize: true,
-            useWorker: true,
-          });
-
-          myConfetti({
-            particleCount:200,
-            spread: 100,
-            origin: { y: 0.6 },
-          }).then(() => container.removeChild(canvas));
-        });
-    </script>
   </body>
 </html>
