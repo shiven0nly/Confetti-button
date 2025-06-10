@@ -1,0 +1,25 @@
+.confetti-button:hover {
+  background-color: #2fdbb6;
+}
+
+.confetti-button:active {
+  background-color: #1da88a;
+}
+
+
+.button-wrapper {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
