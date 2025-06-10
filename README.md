@@ -1,4 +1,4 @@
-# Tech stacks:
+# 📁 Tech stacks:
 - HTML
 - CSS
 - Javascript
