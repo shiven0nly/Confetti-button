@@ -5,5 +5,5 @@
 # 📁 Tech stacks:
 - HTML
 - CSS
-- Javascript (inline)
+- Javascript 
 ----
